@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.AccountFragment"
+    android:layout_margin="30dp">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/txt_logout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Log out"
+        android:textColor="@color/blue_01"
+        android:gravity="right"
+        android:textSize="@dimen/sp_20"/>
+
+    <LinearLayout
+        android:id="@+id/balance_container"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:padding="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_corner">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You have"
+            android:padding="10dp"
+            android:textSize="@dimen/sp_20"/>
+        <TextView
+            android:id="@+id/txt_accBalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SGD $$$$$$$"
+            android:padding="10dp"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="in your account"
+            android:padding="10dp"
+            android:textSize="@dimen/sp_20"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_below="@+id/balance_container"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/cardview_shadow_start_color"/>
+
+    <TextView
+        android:id="@+id/title_activity"
+        android:layout_below="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Activity"
+        android:textSize="@dimen/sp_20"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/activity_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_activity"
+        android:layout_marginBottom="50dp"/>
+    <TextView
+        android:id="@+id/txt_transfer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Make a transfer"
+        android:textColor="@color/blue_01"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/sp_20"/>
+
+</RelativeLayout>
