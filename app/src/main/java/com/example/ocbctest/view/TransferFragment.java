@@ -86,6 +86,9 @@ public class TransferFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Payee.PayeeData payeeInfo = (Payee.PayeeData)txtRecipient.getAdapter().getItem(position);
                 txtRecipient.setText(payeeInfo.getAccountNo());
+                // https://www.titanwolf.org/Network/q/f6af0691-9057-4f17-adc8-d6bf97f2b91e/y
+                // change filtering for the adapter so all items can be visible in drop-down menu
+                adapter.getFilter().filter(null);
             }
         });
 
